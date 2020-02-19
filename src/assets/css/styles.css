@@ -1,0 +1,317 @@
+/* Importar fuentes custom*/
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+/* Generales */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "yanone", Arial, Helvetica;
+    font-size: 20px;
+    background: url("../img/pattern.png");
+    background-attachment: fixed;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/* Barra de navegación / Header / Cabecera */
+header{
+    display: block;
+    width: 100%;
+    height: 90px;
+    background: rgba(53, 103, 164, 0.8);
+    position: fixed;
+    text-transform: uppercase;
+}
+
+header ul{
+    display: flex; 
+    width: 39%;
+    justify-content: center;
+    height: inherit;
+    margin: 0px auto;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+}
+
+header a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover,
+.actived{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Logo */
+#logo{
+    font-family: "finger";
+    font-size: 30px;
+}
+
+#logo a{
+    transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
+    background: transparent;
+    color: black;
+    transform: scale(1.50, 1.50);
+}
+
+/* Principal content */
+#content{
+    min-height: 600px;
+    height: auto;
+    width: 75%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px black;
+    border-right: 1px solid #b7b7b7;
+    border-left: 1px solid #b7b7b7;
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 120px;
+}
+
+/* Footer */
+footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Sobre mí */
+#title{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+#title h1{
+    font-family: "finger";
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#title h2{
+    font-size: 25px;
+    color: grey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+article.about{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.about h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.about p{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+/* Section with Form */
+.container{
+    padding: 50px;
+    padding-top: 10px;
+    height: auto;
+    overflow: hidden;
+}
+
+.container .image{
+    float: left;
+    width: 47%;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .data{
+    float: right;
+    width: 48%;
+    margin-left: 30px;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+form{
+    width: 80%;
+}
+
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form input[type="file"]{
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete,
+.button-cancel{
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53, 103, 164, 1);
+    border: 1px solid rgba(13, 67, 133, 1);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-edit,
+.button-delete,
+.button-cancel{
+    width: 35%;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+}
+
+.button-edit{
+    background: orange;
+}
+.button-delete{
+    background: red;
+}
+.button-cancel{
+    background: green;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+    background: rgba(53, 103, 164, 0.8);
+    border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form-error{
+    font-size: 20px;
+    padding: 3px;
+    color: red;
+    margin-left: 5px;
+}
+
+.message{
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.message a{
+    color: green;
+}
+
+.message a:hover{
+    color: white;
+    background: green;
+}
+
+.success{
+    color: green;
+}
+
+.failed{
+    color: red;
+}
+
+/* Projects page */
+.project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.project .image{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+}
+
+.project a{
+    text-decoration: none;
+    color: black;
+}
+
+.confirm-message{
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
